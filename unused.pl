@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use v5.12;
+use v5.14;
 
 use PPI::Document;
 use PPI::Dumper;
