@@ -16,7 +16,7 @@ foreach my $u (@$use) {
     my $node = $u->find_first('PPI::Token::QuoteLike::Words');
     next unless $node;
     $import{$u->module} //= [];
-    push $import{$u->module}, $node->literal;
+    push @{ $import{$u->module} }, $node->literal;
 }
 
 my $words = $doc->find( sub { $_[1]->isa('PPI::Token::Word') } );
